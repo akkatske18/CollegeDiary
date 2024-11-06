@@ -185,7 +185,7 @@ p {
 .fixed-box {
   position: absolute; /* Keeps it fixed in the viewport */
   bottom: 20px;   /* Space from the bottom */
-  right: 540px;    /* Space from the right */
+  right: 340px;    /* Space from the right */
   background-color: transparent;
   border-radius: 50%; /* Makes it round */
   padding: 10px; /* Padding to create some space around the image */
