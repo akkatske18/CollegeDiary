@@ -1,0 +1,205 @@
+/* Google Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+
+/* For header navigation */
+nav {
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  color: white;
+  font-size: 25px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+  background: #1b9bff;
+  transition: .5s;
+}
+
+/* For section properties */
+section {
+  background: url(Image/foundationbg.jpg) no-repeat center center;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+
+section.archives {
+  background: url('Image/foundationbg.jpg') no-repeat center center;
+  background-size: cover;
+  height: calc(100vh - 80px); /* Full viewport height */
+  display: position;
+  align-items: center;
+  justify-content: center;
+}
+
+section.contrast {
+  background: url(Image/foundationbg.jpg) no-repeat center center;
+  background-size: cover;
+  height: calc(100vh - 80px);
+  position: relative;
+  z-index: 2;
+}
+
+section.contrast::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
+}
+
+/* For About */
+.about {
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+  height: calc(100vh - 80px);
+  padding: 50px;
+  z-index: 2;
+}
+
+.about div h3 {
+  text-align: center;
+}
+
+.footer {
+  position: fixed; /* Fixes the footer at the bottom of the container */
+  bottom: 50px; /* Space from the bottom of the viewport */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Adjust for the width of the footer */
+  padding: 10px; /* Padding for the footer */
+  z-index: 2; /* Ensures it stays above other content */
+  text-align: center; /* Center text inside footer */
+  width: 100%; /* Full width for footer */
+}
+
+.footer hr {
+  max-width: 730px; /* Same as .about class */
+  width: 80%; /* Full width of the footer */
+  border: 1px thin #000; /* Customize border style */
+  margin: 10px auto; /* Center align with margin above and below */
+}
+
+/* For Timeline */
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 60px;
+  max-height: -webkit-fill-available; /* Set a maximum height for the scrollable area */
+  overflow-y: auto; /* Enables vertical scrolling */
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  left: 50%; /* Moves the left edge of the element to the center of the parent container */
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.footer-timeline {
+  text-align: center;
+}
+.footer-timeline hr{
+  margin: 10px auto;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.event {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.event:last-child {
+  border-bottom: none;
+}
+
+.event-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+img, video {
+  max-width: 70%;
+  height: 265px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #555;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.fixed-box {
+  position: absolute; /* Keeps it fixed in the viewport */
+  bottom: 20px;   /* Space from the bottom */
+  right: 540px;    /* Space from the right */
+  background-color: transparent;
+  border-radius: 50%; /* Makes it round */
+  padding: 10px; /* Padding to create some space around the image */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  z-index: 2;
+}
+
+.fixed-box img {
+  width: 40px; /* Adjust the size of the arrow image */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 0.9;
+}
+
+.fixed-box a:hover {
+  background: none;
+}
+
