@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer base {
   html {
@@ -8,7 +8,12 @@
   }
 
   body {
-    @apply min-h-screen text-slate-800 antialiased relative;
+    min-height: 100vh;
+    color: #1e293b;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    background-color: #f0f9ffa1;
   }
 
   body::before {
@@ -19,14 +24,17 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.3;
+    opacity: 0.1;
     z-index: -1;
   }
 }
 
 @layer utilities {
   .text-gradient-sky {
-    @apply bg-gradient-to-r from-sky-500 to-sky-700 bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #0ea5e9, #0369a1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }
 
@@ -35,7 +43,7 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #e0f2fe;
+  background: #c1d1db;
 }
 ::-webkit-scrollbar-thumb {
   background: #7dd3fc;

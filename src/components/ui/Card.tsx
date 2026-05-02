@@ -17,7 +17,7 @@ export default function Card({
 
   return (
     <div
-      className={`bg-white rounded-2xl shadow-cloud border border-sky-100/60 transition-all duration-300 ${hoverClasses} ${className}`}
+      className={`bg-white/90 rounded-2xl shadow-cloud border border-sky-100/60 backdrop-blur-sm transition-all duration-300 ${hoverClasses} ${className}`}
     >
       {children}
     </div>
