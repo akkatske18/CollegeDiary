@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen text-slate-800 antialiased relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url('/images/foundationbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1;
+  }
+}
+
+@layer utilities {
+  .text-gradient-sky {
+    @apply bg-gradient-to-r from-sky-500 to-sky-700 bg-clip-text text-transparent;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e0f2fe;
+}
+::-webkit-scrollbar-thumb {
+  background: #7dd3fc;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
